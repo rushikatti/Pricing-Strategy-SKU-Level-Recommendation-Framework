@@ -1,98 +1,79 @@
-# Pricing-Strategy-SKU-Level-Recommendation-Framework
-This project implements a data-driven pricing strategy framework for a consumer brand selling eco-friendly tableware products across online marketplaces. The framework analyzes multiple business signals and produces SKU-level recommended prices that are realistic and operationally usable.
-Objectives
+# Pricing Strategy & SKU-Level Recommendation Framework
 
-Study the provided pricing, performance, and operational datasets
+## Overview
+This project presents a data-driven pricing framework designed for a consumer brand selling eco-friendly tableware products across online marketplaces. The objective is to move from reactive pricing decisions toward a structured, explainable, and margin-safe pricing approach that can be realistically used by the business.
 
-Identify key signals influencing pricing decisions
+The framework analyzes multiple business signals and generates SKU-level recommended prices supported by clear rationale and executive-level insights.
 
-Design a logical, rule-based pricing framework
+---
 
-Generate defensible SKU-level price recommendations
+## Objectives
+- Study the provided datasets related to pricing, competition, inventory, demand, and returns  
+- Identify key signals that influence pricing decisions  
+- Design a logical, rule-based pricing framework  
+- Generate defensible SKU-level price recommendations  
+- Translate analysis into clear, actionable outputs  
 
-Translate analysis into clear, actionable outputs
+---
 
-Datasets Used
+## Datasets Used
+The analysis integrates the following datasets, aligned at the SKU level:
+- Pricing Data (current price, cost, margin)
+- Competitor Pricing Data
+- Inventory Health Data
+- Advertising Performance Data (ROAS, ACOS, conversion rate)
+- Historical Sales Data
+- Returns Data (7-day, 30-day, 60-day, and 90-day)
 
-The analysis integrates multiple datasets aligned at the SKU level:
+---
 
-Pricing data (current price, cost, margin)
+## Analysis Approach
+1. **Data Cleaning & Standardization**  
+   Cleaned and validated all datasets, handled missing values, and standardized SKU identifiers and numeric formats.
 
-Competitor pricing data
+2. **Feature Engineering**  
+   - Calculated minimum viable prices based on cost and margin requirements  
+   - Derived average competitor prices for market benchmarking  
+   - Created inventory health indicators from supply metrics  
+   - Evaluated demand efficiency using ROAS, ACOS, and conversion rates  
+   - Classified SKUs into return risk tiers using 90-day return data  
 
-Inventory health metrics
+3. **Pricing Logic**  
+   - Margin protection enforced as a hard constraint  
+   - Competitor prices used as a reference where feasible  
+   - Inventory and demand signals applied for price adjustments  
+   - Return risk used as a qualitative validation layer  
 
-Advertising performance (ROAS, ACOS, conversion rate)
+The framework is intentionally rule-based to ensure transparency and business usability.
 
-Historical sales data
+---
 
-Product returns data (7, 30, 60, 90 days)
+## Key Outputs
+- Final recommended price per SKU  
+- Pricing action flag (Increase / Hold)  
+- Primary pricing rationale for each decision  
+- Return risk classification  
+- Executive Pricing Overview Dashboard  
 
-Analysis Approach
+---
 
-Data Cleaning & Standardization
-Ensured consistent SKUs, handled missing values, and standardized numeric formats.
+## Dashboard
+The project includes an executive-ready dashboard that summarizes:
+- Pricing headroom across the SKU catalog  
+- Distribution of pricing actions  
+- Price increase magnitude for eligible SKUs  
+- SKU-level recommendations with supporting rationale  
 
-Feature Engineering
+---
 
-Minimum viable price based on cost and margin
+## Key Insights
+- Pricing flexibility is selective rather than universal  
+- Margin constraints are the primary limiter of pricing decisions  
+- Demand efficiency is the strongest indicator of safe price increases  
+- Returns are best treated as a pricing risk signal rather than a direct pricing lever  
 
-Average competitor price
+---
 
-Inventory health indicators
+## Tools Used
+- Microsoft Excel (data analysis, pricing logic, and dashboard creation)
 
-Demand efficiency metrics
-
-Return risk tiers based on 90-day returns
-
-Pricing Logic
-
-Margin protection enforced as a hard constraint
-
-Competitor prices used as market reference
-
-Inventory and demand signals used for adjustments
-
-Return risk used as a validation layer
-
-The approach is intentionally rule-based for transparency and business usability.
-
-Key Outputs
-
-Final recommended price per SKU
-
-Pricing action (Increase / Hold)
-
-Primary pricing rationale
-
-Return risk classification
-
-Executive Pricing Overview Dashboard
-
-Dashboard
-
-An executive-ready dashboard summarizes:
-
-Pricing headroom across the catalog
-
-Distribution of pricing actions
-
-Price increase magnitude for eligible SKUs
-
-SKU-level recommendations with rationale
-
-The dashboard bridges analysis and execution.
-
-Key Insights
-
-Pricing flexibility is selective, not universal
-
-Margin constraints are the primary pricing limiter
-
-Demand efficiency is the strongest driver of price increases
-
-Returns are best treated as a pricing risk signal, not a direct input
-
-Tools Used
-
-Microsoft Excel (analysis, pricing logic, dashboard)
